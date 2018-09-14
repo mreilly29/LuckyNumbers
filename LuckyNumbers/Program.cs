@@ -30,8 +30,7 @@ namespace LuckyNumbers
                     luckyNums[i] = int.Parse(Console.ReadLine());
                     if (luckyNums[i] < startRange || luckyNums[i] > endRange)
                     {
-                        Console.WriteLine("Please enter a number between the range you've chosen.");
-                        Console.WriteLine("Your range is: " + startRange + " to " + endRange);
+                        Console.WriteLine("Please enter a number between the range: " + startRange + " to " + endRange);                       
                         i--;
                     }
                 }
@@ -55,13 +54,13 @@ namespace LuckyNumbers
 
                 //correctly guessed numbers
                 int correctNums = 0;
-                int div = 7;
+                double div = 15;
                 for (int i = 0; i < luckyNums.Length; i++)
                 {
                     if (luckyNums.Contains(randNums[i]))
                     {
                         correctNums++;
-                        div--;
+                        div -= 2.5;
                     }
                 }
                 Console.WriteLine("You guessed " + correctNums + " correctly!");
