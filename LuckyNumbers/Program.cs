@@ -15,7 +15,7 @@ namespace LuckyNumbers
 
             while (playAgain == true) {
                 double jackpot = 100;
-                double div = 6;
+                double div = 4;
                 Random rand = new Random();
                 int[] luckyNums = new int[6];               
                 int[] randNums = new int[6];
@@ -44,6 +44,7 @@ namespace LuckyNumbers
                         Console.WriteLine("Please enter a valid number between the range: " + startRange + " to " + endRange);                       
                         i--;
                     }
+                    
                 }
 
                 //generates six random lucky numbers               
@@ -73,7 +74,7 @@ namespace LuckyNumbers
                     if (luckyNums.Contains(randNums[i]))
                     {
                         correctNums++;
-                        div --;
+                        div -=.5;
                     }
                 }
                 Console.WriteLine("You guessed " + correctNums + " numbers correctly!");
@@ -89,7 +90,7 @@ namespace LuckyNumbers
                 Console.WriteLine("You won $" + winnings + "!");
 
                 //asks user if they want to play again
-                Console.WriteLine("Would you like to play again? enter yes or no");
+                Console.WriteLine("Would you like to play again? Enter yes or no");
                 string input = Console.ReadLine().ToLower();
                 //if input is no, the application ends
                 if(input == "no")
