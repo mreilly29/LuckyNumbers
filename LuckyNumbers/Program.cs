@@ -26,13 +26,13 @@ namespace LuckyNumbers
                 Console.WriteLine("You decide the range to guess your 6 lucky numbers!");
 
                 //user inputs starting and ending numbers for the range
-                Console.WriteLine("Please enter your starting number for the range.");
+                Console.WriteLine("Enter your starting number for the range.");
                 int startRange = int.Parse(Console.ReadLine());
-                Console.WriteLine("Please enter your ending number for the range.");
+                Console.WriteLine("Enter your ending number for the range.");
                 int endRange = int.Parse(Console.ReadLine());
 
                 //user inputs 6 lucky numbers
-                Console.WriteLine("Enter your six lucky numbers within your range " + startRange + " to " + endRange + ".");
+                Console.WriteLine("Enter your six lucky numbers within your range: " + startRange + " to " + endRange);
                 Console.WriteLine("Please do not duplicate any numbers");
                 //6 numbers saved in array
                 for (int i = 0; i < luckyNums.Length; i++)
